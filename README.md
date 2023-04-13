@@ -1,2 +1,3 @@
 # mtpy_data
- test data for mtpy
+
+This package is meant as a supplement for testing and examples using MTpy.
