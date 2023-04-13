@@ -38,19 +38,19 @@ setup(
     long_description=readme + "\n\n" + history,
     long_description_content_type="text/markdown",
     include_package_data=True,
-    keywords="mtpy-test-data",
-    name="mtpy-test-data",
-    packages=find_packages(include=["mtpy-test-data", "mtpy-test-data.*"]),
+    keywords="mtpy_data",
+    name="mtpy_data",
+    packages=find_packages(include=["mtpy_data", "mtpy_data.*"]),
     setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,
-    url="",
+    url="https://github.com/MTgeophysics/mtpy_data",
     version="0.0.1",
     zip_safe=False,
     package_data={
         "": [
-            "mtpy_test_data/data/profile/*.edi",
-            "mtpy_test_data/data/grid/*.edi",
+            "mtpy_data/data/profile/*.edi",
+            "mtpy_data/data/grid/*.edi",
         ]
     },
 )
