@@ -13,22 +13,22 @@ from pathlib import Path
 PROFILE = Path(__file__).parent.joinpath("data/profile")
 GRID = Path(__file__).parent.joinpath("data/grid")
 
-FWD_FAULTS = Path(__file__).parent.joinpath("foward_models/Faults")
-FWD_HALFSPACE = Path(__file__).parent.joinpath("foward_models/HalfSpace")
+FWD_FAULTS = Path(__file__).parent.joinpath("forward_models/Faults")
+FWD_HALFSPACE = Path(__file__).parent.joinpath("forward_models/HalfSpace")
 FWD_CONDUCTIVE_CUBE = Path(__file__).parent.joinpath(
-    "foward_models/HalfSpaceSQC"
+    "forward_models/HalfSpaceSQC"
 )
 FWD_RESISTIVE_CUBE = Path(__file__).parent.joinpath(
-    "foward_models/HalfSpaceSQR"
+    "forward_models/HalfSpaceSQR"
 )
 FWD_LAYERED_HALFSPACE = Path(__file__).parent.joinpath(
-    "foward_models/LayeredHalfSpace"
+    "forward_models/LayeredHalfSpace"
 )
 FWD_NEAR_SURFACE_CONDUCTIVE_CUBE = Path(__file__).parent.joinpath(
-    "foward_models/NearSquareConductor"
+    "forward_models/NearSquareConductor"
 )
-FWD_NE_CONDUCTOR = Path(__file__).parent.joinpath("foward_models/NEConductor")
-FWD_NE_FAULTS = Path(__file__).parent.joinpath("foward_models/NEFaults")
+FWD_NE_CONDUCTOR = Path(__file__).parent.joinpath("forward_models/NEConductor")
+FWD_NE_FAULTS = Path(__file__).parent.joinpath("forward_models/NEFaults")
 
 PROFILE_LIST = list(PROFILE.glob("*.edi"))
 GRID_LIST = list(GRID.glob("*.edi"))
