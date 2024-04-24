@@ -51,6 +51,14 @@ setup(
         "": [
             "mtpy_data/data/profile/*.edi",
             "mtpy_data/data/grid/*.edi",
+            "mtpy_data/forward_models/Faults/*.edi",
+            "mtpy_data/forward_models/HalfSpace/*.edi",
+            "mtpy_data/forward_models/HalfSpaceSQC/*.edi",
+            "mtpy_data/forward_models/HalfSpaceSQR/*.edi",
+            "mtpy_data/forward_models/LayeredHalfSpace/*.edi",
+            "mtpy_data/forward_models/NearSquareConductor/*.edi",
+            "mtpy_data/forward_models/NEConductor/*.edi",
+            "mtpy_data/forward_models/NEFaults/*.edi",
         ]
     },
 )
