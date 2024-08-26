@@ -1,0 +1,14 @@
+recursive-include tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+recursive-include mtpy_data/data/profile/*.edi
+recursive-include mtpy_data/data/grid/*.edi
+recursive-include mtpy_data/forward_models/Faults/*.edi
+recursive-include mtpy_data/forward_models/HalfSpace/*.edi
+recursive-include mtpy_data/forward_models/HalfSpaceSQC/*.edi
+recursive-include mtpy_data/forward_models/HalfSpaceSQR/*.edi
+recursive-include mtpy_data/forward_models/LayeredHalfSpace/*.edi
+recursive-include mtpy_data/forward_models/NearSquareConductor/*.edi
+recursive-include mtpy_data/forward_models/NEConductor/*.edi
+recursive-include mtpy_data/forward_models/NEFaults/*.edi

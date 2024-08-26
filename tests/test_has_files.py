@@ -35,7 +35,7 @@ from mtpy_data import (
 class TestHasFiles(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        self.lists = list(
+        self.edi_lists = [
             PROFILE_LIST,
             GRID_LIST,
             FWD_FAULTS_GRID_LIST,
@@ -54,9 +54,9 @@ class TestHasFiles(unittest.TestCase):
             FWD_NEAR_SURFACE_CONDUCTIVE_CUBE_PROFILE_LIST,
             FWD_NE_CONDUCTOR_PROFILE_LIST,
             FWD_NE_FAULTS_PROFILE_LIST,
-        )
+        ]
 
-        self.paths = list(
+        self.edi_paths = [
             PROFILE,
             GRID,
             FWD_FAULTS,
@@ -67,16 +67,16 @@ class TestHasFiles(unittest.TestCase):
             FWD_NEAR_SURFACE_CONDUCTIVE_CUBE,
             FWD_NE_CONDUCTOR,
             FWD_NE_FAULTS,
-        )
+        ]
 
     def test_list_not_empty(self):
-        for index, edi_list in enumerate(self.lists):
-            with self.subTest(index):
+        for index, edi_list in enumerate(self.edi_lists):
+            with self.subTest(f"{index}"):
                 self.assertTrue(len(edi_list) > 0)
 
     def test_paths_exists(self):
-        for index, edi_path in enumerate(self.paths):
-            with self.subtest(index):
+        for index, edi_path in enumerate(self.edi_paths):
+            with self.subTest(f"{index}"):
                 self.assertTrue(edi_path.exists())
 
 
