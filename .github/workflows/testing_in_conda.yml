@@ -40,7 +40,7 @@ jobs:
       shell: bash
       run: |
         source activate mtpy_data_test
-        pip install git+https://github.com/MTgeophysics/mtpy_data.git@main
+        pip install -e .
         conda list
     - name: Run Tests
       shell: bash
