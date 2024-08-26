@@ -1,0 +1,52 @@
+name: TestingInConda
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+jobs:
+  setup-build:
+    name: Ex1 (${{ matrix.python-version }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest"]
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Conda
+      uses: s-weigand/setup-conda@v1
+      with:
+        update-conda: false
+        conda-channels: conda-forge
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install Env
+      shell: bash
+      run: |
+        python --version
+        python --version
+        conda create -n mtpy_data_test python=${{ matrix.python-version }}
+        source activate mtpy_data_test
+        conda install pytest
+        conda install pytest-subtests
+        pip install attrs
+           
+    - name: Install Our Package
+      shell: bash
+      run: |
+        source activate mtpy_data-test
+        pip install git+https://github.com/MTgeophysics/mtpy_data.git@main
+        conda list
+    - name: Run Tests
+      shell: bash
+      run: |
+        source activate mtpy_data-test
+        pytest -rA .
+        
+        
