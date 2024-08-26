@@ -37,7 +37,7 @@ setup(
     license="MIT license",
     long_description=readme + "\n\n" + history,
     long_description_content_type="text/markdown",
-    include_package_data=True,
+    include_package_data=False,
     keywords="mtpy_data",
     name="mtpy_data",
     packages=find_packages(include=["mtpy_data", "mtpy_data.*"]),
