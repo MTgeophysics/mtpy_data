@@ -30,7 +30,6 @@ jobs:
       shell: bash
       run: |
         python --version
-        python --version
         conda create -n mtpy_data_test python=${{ matrix.python-version }}
         source activate mtpy_data_test
         conda install pytest
@@ -40,13 +39,13 @@ jobs:
     - name: Install Our Package
       shell: bash
       run: |
-        source activate mtpy_data-test
+        source activate mtpy_data_test
         pip install git+https://github.com/MTgeophysics/mtpy_data.git@main
         conda list
     - name: Run Tests
       shell: bash
       run: |
-        source activate mtpy_data-test
+        source activate mtpy_data_test
         pytest -rA .
         
         
