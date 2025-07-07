@@ -49,16 +49,15 @@ setup(
     zip_safe=False,
     package_data={
         "": [
-            "mtpy_data/data/profile/*.edi",
-            "mtpy_data/data/grid/*.edi",
-            "mtpy_data/forward_models/Faults/*.edi",
-            "mtpy_data/forward_models/HalfSpace/*.edi",
-            "mtpy_data/forward_models/HalfSpaceSQC/*.edi",
-            "mtpy_data/forward_models/HalfSpaceSQR/*.edi",
-            "mtpy_data/forward_models/LayeredHalfSpace/*.edi",
-            "mtpy_data/forward_models/NearSquareConductor/*.edi",
-            "mtpy_data/forward_models/NEConductor/*.edi",
-            "mtpy_data/forward_models/NEFaults/*.edi",
+            "data/profile/*.edi",
+            "data/grid/*.edi",           "forward_models/Faults/*.edi",
+            "forward_models/HalfSpace/*.edi",
+            "forward_models/HalfSpaceSQC/*.edi",
+            "forward_models/HalfSpaceSQR/*.edi",
+            "forward_models/LayeredHalfSpace/*.edi",
+            "forward_models/NearSquareConductor/*.edi",
+            "forward_models/NEConductor/*.edi",
+            "forward_models/NEFaults/*.edi",
         ]
     },
 )
