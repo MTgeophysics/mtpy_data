@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtpy_data"
+version = "0.0.1"
+description = "Test Data for MTpy"
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    {name = "Jared Peacock", email = "jpeacock@usgs.gov"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["mtpy_data"]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/MTgeophysics/mtpy_data"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=3",
+]
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["mtpy_data", "mtpy_data.*"]
+
+[tool.setuptools.package-data]
+"*" = [
+    "data/profile/*.edi",
+    "data/grid/*.edi",
+    "forward_models/Faults/*.edi",
+    "forward_models/HalfSpace/*.edi",
+    "forward_models/HalfSpaceSQC/*.edi",
+    "forward_models/HalfSpaceSQR/*.edi",
+    "forward_models/LayeredHalfSpace/*.edi",
+    "forward_models/NearSquareConductor/*.edi",
+    "forward_models/NEConductor/*.edi",
+    "forward_models/NEFaults/*.edi",
+]
